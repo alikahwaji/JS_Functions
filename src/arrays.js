@@ -35,3 +35,20 @@ function twoArrays(arr) {
     }
     return count
 }
+
+//TODO - Write a function that returns the largest even number in an array.
+//NOTE - evenLargestNumber([1,10,17]) -> 10
+//NOTE - evenLargestNumber([1,3,5,7,9]) -> "No even number"
+
+function evenLargestNumber(arr) {
+    let benchmark = -1
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            if (arr[i] > benchmark) {
+                benchmark = arr[i]
+            }
+        }
+    }
+    return benchmark
+}
